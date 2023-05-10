@@ -8,6 +8,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  #Posgres Database
+  postgres: ^2.4.3
 
   # Base
   cupertino_icons: ^1.0.4
