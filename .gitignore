@@ -51,3 +51,4 @@ app.*.map.json
 /ios/Runner.app.dSYM.zip
 /ios/fastlane/report.xml
 /ios/Runner.ipa
+.fake

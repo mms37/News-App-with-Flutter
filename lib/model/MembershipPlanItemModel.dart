@@ -1,33 +1,32 @@
 import 'dart:convert';
 import 'dart:ffi';
 
-class LanguageItemModel  {
+class LanguageItemModel {
   int id;
   Float price;
   String? timeperiod;
   String? text;
   String? description;
 
-  LanguageItemModel ({
+  LanguageItemModel({
     required this.id,
     required this.price,
     required this.timeperiod,
     required this.text,
     required this.description,
-    });
+  });
 
-
-    factory LanguageItemModel .fromMap(Map<String, dynamic> map) {
-    return LanguageItemModel (
-      id: map['id'],
-      price: map['price'],
-      timeperiod: map['timeperiod'],
-      text: map['text'],
-      description: map['description']
-    );
+  factory LanguageItemModel.fromMap(Map<String, dynamic> map) {
+    return LanguageItemModel(
+        id: map['id'],
+        price: map['price'],
+        timeperiod: map['timeperiod'],
+        text: map['text'],
+        description: map['description']);
   }
 
-  factory LanguageItemModel .fromJson(String source) => LanguageItemModel .fromMap(json.decode(source));
+  factory LanguageItemModel.fromJson(String source) =>
+      LanguageItemModel.fromMap(json.decode(source));
 
   Map<String, dynamic> toMap() {
     return {
