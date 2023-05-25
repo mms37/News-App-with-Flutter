@@ -16,6 +16,15 @@ class LanguageItemModel {
     required this.description,
   });
 
+  factory LanguageItemModel.fromSql(List<dynamic> row) {
+    return LanguageItemModel(
+        id: row[0],
+        price: row[1],
+        timeperiod: row[2],
+        text: row[3],
+        description: row[4]);
+  }
+  
   factory LanguageItemModel.fromMap(Map<String, dynamic> map) {
     return LanguageItemModel(
         id: map['id'],

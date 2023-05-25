@@ -13,8 +13,17 @@ class FollowersItemModel  {
     required this.noofarticle,
     });
 
+    factory FollowersItemModel.fromSql(List<dynamic> row) {
+    return FollowersItemModel (
+      id: row[0],
+      image: row[1],
+      name: row[2],
+      noofarticle: row[3]
+    );
+  }
 
-    factory FollowersItemModel .fromMap(Map<String, dynamic> map) {
+
+    factory FollowersItemModel.fromMap(Map<String, dynamic> map) {
     return FollowersItemModel (
       id: map['id'],
       image: map['image'],
@@ -23,7 +32,7 @@ class FollowersItemModel  {
     );
   }
 
-  factory FollowersItemModel .fromJson(String source) => FollowersItemModel .fromMap(json.decode(source));
+  factory FollowersItemModel.fromJson(String source) => FollowersItemModel .fromMap(json.decode(source));
 
   Map<String, dynamic> toMap() {
     return {

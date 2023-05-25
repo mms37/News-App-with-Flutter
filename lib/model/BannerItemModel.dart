@@ -9,6 +9,13 @@ class BannerItemModel {
     required this.image
     });
 
+    factory BannerItemModel.fromSql(List<dynamic> row) {
+    return BannerItemModel(
+      id: row[0],
+      image: row[1]
+    );
+  }
+
 
     factory BannerItemModel.fromMap(Map<String, dynamic> map) {
     return BannerItemModel(

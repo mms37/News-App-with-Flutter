@@ -3,30 +3,37 @@ import 'dart:convert';
 class LanguageItemModel  {
   int id;
   String? name;
-  String? text;
+  String? image;
 
   LanguageItemModel ({
     required this.id,
     required this.name,
-    required this.text,
+    required this.image,
     });
 
 
-    factory LanguageItemModel .fromMap(Map<String, dynamic> map) {
+    factory LanguageItemModel.fromSql(List<dynamic> row) {
+    return LanguageItemModel (
+      id: row[0],
+      name: row[1],
+      image: row[2]
+    );  
+  }
+
+    factory LanguageItemModel.fromMap(Map<String, dynamic> map) {
     return LanguageItemModel (
       id: map['id'],
       name: map['name'],
-      text: map['text']
+      image: map['image']
     );
   }
 
-  factory LanguageItemModel .fromJson(String source) => LanguageItemModel .fromMap(json.decode(source));
-
+  factory LanguageItemModel.fromJson(String source) => LanguageItemModel .fromMap(json.decode(source));
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'name': name,
-      'text': text,
+      'image': image,
     };
   }
 

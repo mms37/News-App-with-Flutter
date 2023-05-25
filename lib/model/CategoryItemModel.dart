@@ -9,6 +9,13 @@ class CategoryItemModel {
     required this.name
     });
 
+    factory CategoryItemModel.fromSql(List<dynamic> row) {
+    return CategoryItemModel(
+      id: row[0],
+      name: row[1]
+    );
+  }
+
 
     factory CategoryItemModel.fromMap(Map<String, dynamic> map) {
     return CategoryItemModel(

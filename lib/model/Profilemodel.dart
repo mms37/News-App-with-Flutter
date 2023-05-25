@@ -12,6 +12,7 @@ class Profilemodel {
   int followers;
   String following;
   int n_b_followers_item_model;
+  int articlecount;
 
   Profilemodel({
     required this.id,
@@ -21,10 +22,28 @@ class Profilemodel {
     required this.email,
     required this.password,
     required this.image,
+    required this.n_b_followers_item_model,
+    required this.articlecount,
     required this.followers,
     required this.following,
-    required this.n_b_followers_item_model,
+
   });
+
+  factory Profilemodel.fromSql(List<dynamic> row) {
+    return Profilemodel(
+      id: row[0],
+      name: row[1],
+      nbnewsdetailsmodel: row[2],
+      username: row[3],
+      email: row[4],
+      password: row[5],
+      image: row[6],
+      n_b_followers_item_model: row[7],
+      articlecount: row[8],
+      followers: row[9],
+      following: row[10],
+    );
+  }
 
   factory Profilemodel.fromMap(Map<String, dynamic> map) {
     return Profilemodel(
@@ -38,6 +57,7 @@ class Profilemodel {
       followers: map['followers'],
       following: map['following'],
       n_b_followers_item_model: map['n_b_followers_item_model'],
+      articlecount: map['articlecount'],
     );
   }
 
@@ -56,6 +76,7 @@ class Profilemodel {
       'followers': followers,
       'following': following,
       'n_b_followers_item_model': n_b_followers_item_model,
+      'articlecount': articlecount,
     };
   }
 

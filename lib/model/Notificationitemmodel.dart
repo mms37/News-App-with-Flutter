@@ -12,6 +12,11 @@ class Notificationitemmodel {
     required this.ison,
   });
 
+  factory Notificationitemmodel.fromSql(List<dynamic> row) {
+    return Notificationitemmodel(
+        id: row[0], title: row[1], ison: row[2]);
+  }
+
   factory Notificationitemmodel.fromMap(Map<String, dynamic> map) {
     return Notificationitemmodel(
         id: map['id'], title: map['title'], ison: map['ison']);

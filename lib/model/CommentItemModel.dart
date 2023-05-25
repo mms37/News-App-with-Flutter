@@ -17,6 +17,17 @@ class CommandItemModel {
     });
 
 
+    factory CommandItemModel.fromSql(List<dynamic> row) {
+    return CommandItemModel(
+      id: row[0],
+      date: row[1],
+      time: row[2],
+      message: row[3],
+      n_b_profile_model: row[4]
+
+    );
+  }
+  
     factory CommandItemModel.fromMap(Map<String, dynamic> map) {
     return CommandItemModel(
       id: map['id'],

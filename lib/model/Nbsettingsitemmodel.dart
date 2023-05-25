@@ -16,6 +16,16 @@ class Profilemodel {
     required this.n_b_profile_model,
   });
 
+  factory Profilemodel.fromSql(List<dynamic> row) {
+    return Profilemodel(
+      id: row[0],
+      title: row[1],
+      nblanguageitemmodel: row[2],
+      nbnotificationitemmodel: row[3],
+      n_b_profile_model: row[4],
+    );
+  }
+
   factory Profilemodel.fromMap(Map<String, dynamic> map) {
     return Profilemodel(
       id: map['id'],
