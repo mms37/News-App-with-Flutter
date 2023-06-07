@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 
 class Profilemodel {
   int id;
@@ -11,7 +10,7 @@ class Profilemodel {
   String image;
   int followers;
   String following;
-  int n_b_followers_item_model;
+  int followers2;
   int articlecount;
 
   Profilemodel({
@@ -22,11 +21,10 @@ class Profilemodel {
     required this.email,
     required this.password,
     required this.image,
-    required this.n_b_followers_item_model,
+    required this.followers2,
     required this.articlecount,
     required this.followers,
     required this.following,
-
   });
 
   factory Profilemodel.fromSql(List<dynamic> row) {
@@ -38,7 +36,7 @@ class Profilemodel {
       email: row[4],
       password: row[5],
       image: row[6],
-      n_b_followers_item_model: row[7],
+      followers2: row[7],
       articlecount: row[8],
       followers: row[9],
       following: row[10],
@@ -56,7 +54,7 @@ class Profilemodel {
       image: map['image'],
       followers: map['followers'],
       following: map['following'],
-      n_b_followers_item_model: map['n_b_followers_item_model'],
+      followers2: map['followers2'],
       articlecount: map['articlecount'],
     );
   }
@@ -75,7 +73,7 @@ class Profilemodel {
       'password': password,
       'followers': followers,
       'following': following,
-      'n_b_followers_item_model': n_b_followers_item_model,
+      'followers2': followers2,
       'articlecount': articlecount,
     };
   }

@@ -28,7 +28,8 @@ class NBAllNewsComponentState extends State<NBAllNewsComponent> {
   }
 
   Future<void> init() async {
-    pageController = PageController(initialPage: pageIndex, viewportFraction: 0.9);
+    pageController =
+        PageController(initialPage: pageIndex, viewportFraction: 0.9);
   }
 
   @override
@@ -57,7 +58,9 @@ class NBAllNewsComponentState extends State<NBAllNewsComponent> {
                   return commonCachedNetworkImage(
                     mBannerItems[index].image!,
                     fit: BoxFit.fill,
-                  ).cornerRadiusWithClipRRect(16).paddingRight(pageIndex < 2 ? 16 : 0);
+                  )
+                      .cornerRadiusWithClipRRect(16)
+                      .paddingRight(pageIndex < 2 ? 16 : 0);
                 },
               ),
               onPageChanged: (value) {},
@@ -75,7 +78,8 @@ class NBAllNewsComponentState extends State<NBAllNewsComponent> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Latest News', style: boldTextStyle(size: 20)),
-              Text('Show More', style: boldTextStyle(color: NBPrimaryColor)).onTap(
+              Text('Show More', style: boldTextStyle(color: NBPrimaryColor))
+                  .onTap(
                 () {
                   NBShowMoreNewsScreen().launch(context);
                 },

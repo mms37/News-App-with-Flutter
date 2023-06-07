@@ -1,19 +1,19 @@
 import 'dart:convert';
-import 'dart:ffi';
+// import 'dart:ffi';
 
 class Profilemodel {
   int id;
   String title;
   int nblanguageitemmodel;
   int nbnotificationitemmodel;
-  int n_b_profile_model;
+  int nb;
 
   Profilemodel({
     required this.id,
     required this.title,
     required this.nblanguageitemmodel,
     required this.nbnotificationitemmodel,
-    required this.n_b_profile_model,
+    required this.nb,
   });
 
   factory Profilemodel.fromSql(List<dynamic> row) {
@@ -22,7 +22,7 @@ class Profilemodel {
       title: row[1],
       nblanguageitemmodel: row[2],
       nbnotificationitemmodel: row[3],
-      n_b_profile_model: row[4],
+      nb: row[4],
     );
   }
 
@@ -32,7 +32,7 @@ class Profilemodel {
       title: map['title'],
       nblanguageitemmodel: map['nblanguageitemmodel'],
       nbnotificationitemmodel: map['nbnotificationitemmodel'],
-      n_b_profile_model: map['n_b_profile_model'],
+      nb: map['nb'],
     );
   }
 
@@ -45,7 +45,7 @@ class Profilemodel {
       'title': title,
       'nblanguageitemmodel': nblanguageitemmodel,
       'nbnotificationitemmodel': nbnotificationitemmodel,
-      'n_b_profile_model': n_b_profile_model,
+      'nb': nb,
     };
   }
 

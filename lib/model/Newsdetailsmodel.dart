@@ -10,7 +10,7 @@ class Newsdetailsmodel {
   String? image;
   Bool isbookmark;
   DateTime time;
-  int n_b_comment_item_model;
+  int comment;
 
   Newsdetailsmodel({
     required this.id,
@@ -21,7 +21,7 @@ class Newsdetailsmodel {
     required this.image,
     required this.isbookmark,
     required this.time,
-    required this.n_b_comment_item_model,
+    required this.comment,
   });
 
   factory Newsdetailsmodel.fromSql(List<dynamic> row) {
@@ -34,7 +34,7 @@ class Newsdetailsmodel {
       image: row[5],
       isbookmark: row[6],
       time: row[7],
-      n_b_comment_item_model: row[8],
+      comment: row[8],
     );
   }
 
@@ -48,7 +48,7 @@ class Newsdetailsmodel {
       image: map['image'],
       isbookmark: map['isbookmark'],
       time: map['time'],
-      n_b_comment_item_model: map['n_b_comment_item_model'],
+      comment: map['comment'],
     );
   }
 
@@ -65,7 +65,7 @@ class Newsdetailsmodel {
       'image': image,
       'isbookmark': isbookmark,
       'time': time,
-      'n_b_comment_item_model': n_b_comment_item_model,
+      'comment': comment,
     };
   }
 

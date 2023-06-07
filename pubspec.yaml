@@ -10,14 +10,13 @@ dependencies:
     sdk: flutter
   #Posgres Database
   postgres: ^2.4.3
-  postgres: ^2.2.2
-  # Base
-  cupertino_icons: ^1.0.3
-  nb_utils: ^5.0.8
-  intl: ^0.18.1
-  flutter_vector_icons: ^2.0.0
 
-  
+  # Base
+  cupertino_icons: ^1.0.4
+  nb_utils: ^4.4.10
+  intl: ^0.17.0
+  flutter_vector_icons: ^1.0.0
+  google_fonts: ^2.2.0
   mobx: ^2.0.3
   flutter_mobx: ^2.0.1
 
